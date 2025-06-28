@@ -1,32 +1,38 @@
 #include <iostream>
+#include <cmath> // For sqrt
 using namespace std;
 
 int main()
 {
+    int n;
+    bool isComposite = false;
 
-    int n, prime = 0;
-    cout << "enter any number : ";
+    cout << "Enter any number: ";
     cin >> n;
+
     if (n < 2)
     {
-        cout << "Not a prime and composite" << endl;
+        cout << "Not a prime and not a composite number" << endl;
         return 0;
     }
 
-    for (int i = 2; i < n; i++)
+    for (int i = 2; i <= sqrt(n); i++)
     {
         if (n % i == 0)
         {
-            prime = 1;
+            isComposite = true;
             break;
         }
     }
-    if (prime)
+
+    if (isComposite)
     {
-        cout << n << " is composite ";
+        cout << n << " is a composite number." << endl;
     }
     else
     {
-        cout << n << " is prime ";
+        cout << n << " is a prime number." << endl;
     }
+
+    return 0;
 }

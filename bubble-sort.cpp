@@ -13,7 +13,6 @@ void bubblesort(int arr[], int size)
             }
         }
     }
-    cout << endl;
 }
 
 void printarray(int array[], int size)
